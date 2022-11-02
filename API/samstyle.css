@@ -1,0 +1,334 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    list-style-type: none;
+    text-decoration: none;
+}
+
+
+    nav{
+    display: flex;
+    height: 80px;
+    width: 100%;
+    background: #1b1b1b;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 50px 0 100px;
+    flex-wrap: wrap;
+  }
+  nav .logo{
+    color: #fff;
+    font-size: 35px;
+    font-weight: 600;
+  }
+  nav ul{
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+  }
+  nav ul li{
+    margin: 0 5px;
+  }
+  nav ul li a{
+    color: #f2f2f2;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: 500;
+    padding: 8px 15px;
+    border-radius: 5px;
+    letter-spacing: 1px;
+    transition: all 0.3s ease;
+  }
+  nav ul li a.active,
+  nav ul li a:hover{
+    color: #111;
+    background: #fff;
+  }
+  nav .menu-btn i{
+    color: #fff;
+    font-size: 22px;
+    cursor: pointer;
+    display: none;
+  }
+  input[type="checkbox"]{
+    display: none;
+  }
+  @media (max-width: 1000px){
+    nav{
+      padding: 0 40px 0 50px;
+    }
+  }
+  @media (max-width: 920px) {
+    nav .menu-btn i{
+      display: block;
+    }
+    #click:checked ~ .menu-btn i:before{
+      content: "\f00d";
+    }
+    nav ul{
+      position: fixed;
+      top: 80px;
+      left: -100%;
+      background: #111;
+      height: 100vh;
+      width: 100%;
+      text-align: center;
+      display: block;
+      transition: all 0.3s ease;
+    }
+    #click:checked ~ ul{
+      left: 0;
+    }
+    nav ul li{
+      width: 100%;
+      margin: 40px 0;
+    }
+    nav ul li a{
+      width: 100%;
+      margin-left: -100%;
+      display: block;
+      font-size: 20px;
+      transition: 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    }
+    #click:checked ~ ul li a{
+      margin-left: 0px;
+    }
+    nav ul li a.active,
+    nav ul li a:hover{
+      background: none;
+      color: red;
+    }
+  }
+hr{
+        height: 1px;
+        background-color: #ccc;
+        border: none;
+        width: 100%;
+}
+.heading h1{
+    text-align: center;
+    align-items: center;
+    color: white;
+    background-color: black;
+    font-weight: bold;
+    padding: 20px;
+    font-size: 100px;
+    font-family: 'Fjalla One', sans-serif;
+}
+.grid{
+    display:grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows:1fr 1fr ;
+    background-color: black;
+}
+.news{
+    border: 3px solid grey;
+    padding:30px;
+}
+.news img{
+    width:100%;
+}
+.news h2,h4{
+    color:white;
+    font-weight: bold;
+}
+.news p{
+    color:grey;
+}
+
+.more{margin:0;
+    padding:0;
+    height:100vh;
+    width:100%;
+    background-image: url(more.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    display:flex;
+    flex-direction: column;
+}
+.data{
+    width:80%;
+    padding:100px; 
+    color:gray;    
+}
+.data h1{
+    font-size: 57px;
+    margin:60px;
+    color:black;
+    text-align: center;
+}
+.data p{
+    color:blue;
+    font-size: 28px;
+    margin-left: 66px;    
+}
+.data a:hover{
+    color:white;
+    background: black;
+}
+
+
+.data .ctn{    
+    color:aquamarine;
+    border: 2px solid white;
+    border-radius: 30px;
+    margin-left:66px;
+    padding: 20px; 
+    background-color: purple; 
+}
+footer{
+    background-color:black;
+    color:red;
+}
+footer p{
+    color:gray;
+}
+footer .container{
+    width:90%;
+    margin:0 auto;
+    display:flex;
+    padding:50px 0;
+}
+.about{
+    padding:0 15px;
+}
+.about, .contact{
+    width:40%;
+}
+.links{
+    width:20%;
+}
+.container h2{
+    margin-bottom: 20px;
+}
+.social{
+    margin-top: 30px;
+}
+.social ul{
+    display:flex;
+}
+.social ul li a{
+    display: inline-block;
+    margin-right: 50px;
+    width: 50px;
+    height: 50px;
+    padding-top: 15px;
+    background-color: transparent;
+    border: 1px solid gray;
+    text-align: center;
+    border-radius: 50%;
+}
+.social ul li a:hover{
+    color:black;
+    background-color: red;
+}
+.links ul li a{
+    color:gray;
+}
+.links ul li{
+    margin-bottom: 15px;
+    font-size: 20px;
+}
+.links ul li a:hover{
+    color:white;
+}
+.contact ul li{
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+}
+.contact ul li span{
+    margin-right:15px;
+
+}
+.contact ul li a{
+    color:gray;
+}
+@media screen and(max-width:992px) {
+    .about,.contact{
+    width:35%;
+    }
+    .links{
+    width:30%;
+    }
+}
+@media  screen and (max-width:767px) {
+    .about,.contact,.links{
+    width:100%;
+    margin-bottom:30px;
+    } 
+    .container{
+        flex-direction: column;
+    } 
+}
+@media screen and (max-width:1080px){
+    
+        .social ul li a{
+           margin-right: 10px;
+        }    
+}
+@media only screen and (min-width: 350px) and (max-width: 614px){
+    .navbar ul li{
+        margin:10px;
+        padding: 5px;
+    }
+}
+@media only screen and (max-width: 350px){
+    .navbar ul li{
+        margin:5px;
+        padding: 4px;
+    }
+}
+@media only screen and (max-width: 300px){
+    .navbar ul li{
+        margin:5px;
+        padding: 4px;
+        font-size:15px ;
+    }
+}
+@media only screen and (max-width: 379px){
+    .heading h1{
+        font-size: 70px;
+    }
+}
+@media screen and (max-width:860px){
+    
+    .content .item1{
+        width:100%;
+    }
+    .content .item{
+        width:100%;
+    }
+}
+@media only screen and (max-width: 950px){
+    .data p{
+        font-size: 20px;
+        width:60%;
+    }
+    .data h1{
+        font-size: 40px;
+    }
+}
+@media only screen and (max-width: 970px){
+    .data{
+        width:100%;
+        padding: 20px;
+    }
+    
+}
+@media only screen and (max-width: 760px){
+    .data{
+        width:100%;
+        padding: 20px;
+    }
+    
+}
+@media only screen and (max-width: 690px){
+    .grid{
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
+    }
+}
